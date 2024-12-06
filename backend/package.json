@@ -1,0 +1,23 @@
+{
+  "name": "assignment-2",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meet050/Assignment-2.git"
+  },
+  "author": "Meet Pandya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meet050/Assignment-2/issues"
+  },
+  "homepage": "https://github.com/meet050/Assignment-2#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
