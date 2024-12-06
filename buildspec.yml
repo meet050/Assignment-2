@@ -1,15 +1,17 @@
 version: 0.2
-
 phases:
   install:
     runtime-versions:
-      nodejs: 14
+      python: 3.8
     commands:
-      - cd backend
-      - npm install
+      - pip install -r src/requirements.txt
   build:
     commands:
-      - echo "Build completed successfully."
+      - pytest tests/
+  post_build:
+    commands:
+      - echo "Build completed successfully!"
+      - aws deploy push --application-name HealthcareAppDeploy --description "Deploying Healthcare App"
 artifacts:
   files:
-    - "**/*"
+    - src/*
