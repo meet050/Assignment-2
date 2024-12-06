@@ -7,9 +7,16 @@ phases:
     commands:
       - cd backend
       - npm install
+  pre_build:
+    commands:
+      - npm test  # Run tests
   build:
     commands:
       - echo "Build completed successfully."
+      - npm run build  # Optional: Build the frontend
+  post_build:
+    commands:
+      - echo "Build phase completed"
 artifacts:
   files:
     - "**/*"

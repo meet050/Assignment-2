@@ -12,6 +12,11 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Healthcare App API!");
 });
 
+const connectDB = require("./config/db");
+
+connectDB();
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
